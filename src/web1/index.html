@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web1 RabbitMQ</title>
+</head>
+<body>
+
+<h1>WEB 1</h1>
+
+<input type="text" id="msg" placeholder="Message">
+<button onclick="sendMessage()">Send</button>
+
+<div id="messages"></div>
+
+<script>
+function sendMessage() {
+    const input = document.getElementById('msg');
+    const div = document.getElementById('messages');
+
+    const p = document.createElement('p');
+    p.innerText = "WEB1: " + input.value;
+
+    div.appendChild(p);
+
+    input.value = "";
+}
+</script>
+
+</body>
+</html>
